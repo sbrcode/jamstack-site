@@ -1,6 +1,8 @@
 import Head from "next/head"
 import Image from "next/image"
+import Link from "next/link"
 import styles from "../styles/Home.module.css"
+import Logo from "../assets/Logo.svg"
 
 export default function Home() {
   return (
@@ -11,10 +13,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.container}>
-        <Image src="/Logo.svg" alt="Logo" width="300" height="64" />
+      <div className={styles.header}>
+        <Link href="/">
+          <a>
+            <Image src={Logo} alt="Logo" width="225" height="64" />
+          </a>
+        </Link>
+        <Link href="/services">SERVICES</Link>
+        <Link href="/votre_besoin">VOTRE BESOIN</Link>
+        <Link href="/ressources">RESSOURCES</Link>
+        <a href="https://calendly.com/pickbeam/prise-de-contact">
+          NOUS CONTACTER
+        </a>
       </div>
-
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
