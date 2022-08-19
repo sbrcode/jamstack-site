@@ -22,7 +22,11 @@ export default function Home() {
         <Link href="/services">SERVICES</Link>
         <Link href="/votre_besoin">VOTRE BESOIN</Link>
         <Link href="/ressources">RESSOURCES</Link>
-        <a href="https://calendly.com/pickbeam/prise-de-contact">
+        <a
+          href="https://calendly.com/pickbeam/prise-de-contact"
+          target="_blank"
+          rel="noreferrer"
+        >
           NOUS CONTACTER
         </a>
       </div>
