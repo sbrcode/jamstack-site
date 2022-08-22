@@ -3,8 +3,10 @@ import Image from "next/image"
 import Link from "next/link"
 import styles from "../styles/Home.module.css"
 import Logo from "../assets/Logo.svg"
+import { useState } from "react"
 
 export default function Home() {
+  const [hovered, setHovered] = useState(false)
   return (
     <div className={styles.container}>
       <Head>
@@ -13,15 +15,42 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.header}>
+      <nav className={styles.header}>
         <Link href="/">
           <a>
-            <Image src={Logo} alt="Logo" width="225" height="64" />
+            <Image src={Logo} alt="Logo" width="180" height="64" />
           </a>
         </Link>
-        <Link href="/services">SERVICES</Link>
-        <Link href="/votre_besoin">VOTRE BESOIN</Link>
-        <Link href="/ressources">RESSOURCES</Link>
+        <div className={styles.subHeader}>
+          <Link href="/services">SERVICES</Link>
+          <Link href="/votre_besoin">VOTRE BESOIN</Link>
+          <button
+            className={styles.navButton}
+            onMouseEnter={() => setHovered(true)}
+            onMouseOut={() => setHovered(false)}
+          >
+            RESSOURCES
+          </button>
+          {hovered && (
+            <div className={styles.bubble}>
+              <Link href="/blog">
+                <p>
+                  Blog
+                  <br />
+                  Notre passion du web partagée
+                </p>
+              </Link>
+              <Link href="/qu-est-ce-que-la-jamstack">
+                <p>
+                  Jamstack expliquée
+                  <br />
+                  Mais qu est-ce que la Jamstack ?
+                </p>
+              </Link>
+            </div>
+          )}
+        </div>
+
         <a
           href="https://calendly.com/pickbeam/prise-de-contact"
           target="_blank"
@@ -29,7 +58,8 @@ export default function Home() {
         >
           NOUS CONTACTER
         </a>
-      </div>
+      </nav>
+
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
