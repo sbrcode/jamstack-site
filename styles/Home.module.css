@@ -131,8 +131,9 @@
 }
 
 .logo {
-  height: 1em;
+  height: 1.3em;
   margin-left: 0.5rem;
+  color: #0070f3;
 }
 
 @media (max-width: 600px) {
