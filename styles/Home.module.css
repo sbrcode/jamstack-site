@@ -12,8 +12,9 @@
   align-items: center;
 }
 
-.header {
+.navbar {
   flex: 1;
+  margin-top: 2rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -29,9 +30,10 @@
 
 .tooltip {
   position: absolute;
-  top: 3rem;
+  top: 5rem;
   background-color: whitesmoke;
   color: black;
+  border-radius: 0.5rem;
 }
 
 .links {
@@ -43,6 +45,15 @@
 .links p {
   color: #0070f3;
   font-size: small;
+}
+
+.calend {
+  background-color: #67f2cb;
+  color: black;
+  font-weight: bold;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  border-radius: 1.5rem;
 }
 
 .footer {
@@ -87,15 +98,6 @@
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {

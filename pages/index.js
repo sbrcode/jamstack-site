@@ -1,14 +1,9 @@
 import Head from "next/head"
-import Image from "next/image"
-import Link from "next/link"
 import styles from "../styles/Home.module.css"
-import Logo from "../assets/Logo.svg"
 import { useState } from "react"
-import { LINKSLIST } from "../constants/constants"
+import NavBar from "../components/navbar"
 
 export default function Home() {
-  const [hovered, setHovered] = useState("")
-
   return (
     <div className={styles.container}>
       <Head>
@@ -17,54 +12,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav className={styles.header}>
-        <Link href="/">
-          <a>
-            <Image src={Logo} alt="Logo" width="180" height="64" />
-          </a>
-        </Link>
-        <div className={styles.subHeader}>
-          {LINKSLIST.length !== 0 &&
-            LINKSLIST.map((link, linkId) => (
-              <div key={linkId} onMouseEnter={() => setHovered(link.name)}>
-                {link.name}
-                {hovered === link.name && (
-                  <div
-                    className={styles.tooltip}
-                    onMouseLeave={() => setHovered("")}
-                  >
-                    {Object.values(link.links).map((value, index) => (
-                      <Link key={index} href={value.url}>
-                        <div className={styles.links}>
-                          {value.title}
-                          <p>{value.subTitle}</p>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-        </div>
-
-        <a
-          href="https://calendly.com/pickbeam/prise-de-contact"
-          target="_blank"
-          rel="noreferrer"
-        >
-          NOUS CONTACTER
-        </a>
-      </nav>
+      <NavBar />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <h1 className={styles.title}>Welcome to PickBeam !</h1>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -75,24 +26,6 @@ export default function Home() {
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
           </a>
         </div>
       </main>
