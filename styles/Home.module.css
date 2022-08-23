@@ -24,19 +24,25 @@
   display: flex;
   min-width: 15rem;
   font-size: small;
+  cursor: pointer;
 }
 
-.navButton {
-  border: 0;
-  background-color: black;
-}
-
-.bubble {
+.tooltip {
   position: absolute;
   top: 3rem;
   background-color: whitesmoke;
   color: black;
-  z-index: 1;
+}
+
+.links {
+  margin-inline: 1rem;
+  font-size: medium;
+  padding-top: 1rem;
+}
+
+.links p {
+  color: #0070f3;
+  font-size: small;
 }
 
 .footer {

@@ -4,9 +4,11 @@ import Link from "next/link"
 import styles from "../styles/Home.module.css"
 import Logo from "../assets/Logo.svg"
 import { useState } from "react"
+import { LINKSLIST } from "../constants/constants"
 
 export default function Home() {
-  const [hovered, setHovered] = useState(false)
+  const [hovered, setHovered] = useState("")
+
   return (
     <div className={styles.container}>
       <Head>
@@ -22,33 +24,27 @@ export default function Home() {
           </a>
         </Link>
         <div className={styles.subHeader}>
-          <Link href="/services">SERVICES</Link>
-          <Link href="/votre_besoin">VOTRE BESOIN</Link>
-          <button
-            className={styles.navButton}
-            onMouseEnter={() => setHovered(true)}
-            onMouseOut={() => setHovered(false)}
-          >
-            RESSOURCES
-          </button>
-          {hovered && (
-            <div className={styles.bubble}>
-              <Link href="/blog">
-                <p>
-                  Blog
-                  <br />
-                  Notre passion du web partagée
-                </p>
-              </Link>
-              <Link href="/qu-est-ce-que-la-jamstack">
-                <p>
-                  Jamstack expliquée
-                  <br />
-                  Mais qu est-ce que la Jamstack ?
-                </p>
-              </Link>
-            </div>
-          )}
+          {LINKSLIST.length !== 0 &&
+            LINKSLIST.map((link, linkId) => (
+              <div key={linkId} onMouseEnter={() => setHovered(link.name)}>
+                {link.name}
+                {hovered === link.name && (
+                  <div
+                    className={styles.tooltip}
+                    onMouseLeave={() => setHovered("")}
+                  >
+                    {Object.values(link.links).map((value, index) => (
+                      <Link key={index} href={value.url}>
+                        <div className={styles.links}>
+                          {value.title}
+                          <p>{value.subTitle}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
         </div>
 
         <a
