@@ -13,8 +13,10 @@
 }
 
 .navbar {
-  flex: 1;
-  margin-top: 2rem;
+  position: sticky;
+  top: 0px;
+  right: 0px;
+  left: 0px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -30,7 +32,7 @@
 
 .tooltip {
   position: absolute;
-  top: 5rem;
+  top: 3rem;
   background-color: whitesmoke;
   color: black;
   border-radius: 0.5rem;
