@@ -1,5 +1,8 @@
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
+import Image from "next/image"
+import groupe413 from "../assets/Groupe 413.png"
+import ContactButton from "../components/contactButton"
 
 export default function Home() {
   return (
@@ -11,18 +14,24 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to PickBeam !</h1>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+        <div>
+          <Image
+            alt="groupe 413"
+            src={groupe413}
+            layout="fill"
+            objectFit="scale-down"
+            quality={100}
+            className={styles.bgImage}
+          />
+          <div className={styles.text}>
+            <p>AGENCE JAMSTACK À TOULOUSE</p>
+            <h1>{"L'excellence du web au service de votre croissance"}</h1>
+            <p>
+              Entourez-vous d’une équipe performante à votre écoute pour vous
+              accompagner du design au développement de votre solution digitale.
+            </p>
+            <ContactButton title={"Passer à l'action"} />
+          </div>
         </div>
       </main>
     </div>

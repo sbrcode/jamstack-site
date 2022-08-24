@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css"
 import Logo from "../assets/Logo.svg"
 import { useState } from "react"
 import { LINKSLIST } from "../constants/constants"
+import ContactButton from "./contactButton"
 
 export default function NavBar() {
   const [hovered, setHovered] = useState("")
@@ -38,15 +39,7 @@ export default function NavBar() {
             </div>
           ))}
       </div>
-      <div className={styles.calend}>
-        <a
-          href="https://calendly.com/pickbeam/prise-de-contact"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Nous Contacter
-        </a>
-      </div>
+      <ContactButton title={"Nous Contacter"} />
     </nav>
   )
 }
