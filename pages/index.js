@@ -14,24 +14,22 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div>
-          <Image
-            alt="groupe 413"
-            src={groupe413}
-            layout="fill"
-            objectFit="scale-down"
-            quality={100}
-            className={styles.bgImage}
-          />
-          <div className={styles.text}>
-            <p>AGENCE JAMSTACK À TOULOUSE</p>
-            <h1>{"L'excellence du web au service de votre croissance"}</h1>
-            <p>
-              Entourez-vous d’une équipe performante à votre écoute pour vous
-              accompagner du design au développement de votre solution digitale.
-            </p>
-            <ContactButton title={"Passer à l'action"} />
-          </div>
+        <Image
+          alt="groupe 413"
+          src={groupe413}
+          layout="fill"
+          objectFit="scale-down"
+          quality={100}
+          className={styles.bgImage}
+        />
+        <div className={styles.text}>
+          <p>AGENCE JAMSTACK À TOULOUSE</p>
+          <h1>{"L'excellence du web au service de votre croissance"}</h1>
+          <p>
+            Entourez-vous d’une équipe performante à votre écoute pour vous
+            accompagner du design au développement de votre solution digitale.
+          </p>
+          <ContactButton title={"Passer à l'action"} />
         </div>
       </main>
     </div>

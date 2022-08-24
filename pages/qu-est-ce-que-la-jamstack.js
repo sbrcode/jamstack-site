@@ -1,5 +1,5 @@
-function Jamstack() {
-  return <div>Jamstack</div>
-}
+import styles from "../styles/Home.module.css"
 
-export default Jamstack
+export default function Jamstack() {
+  return <div className={styles.page}>Quoi donc est-ce la Jamstack ?</div>
+}

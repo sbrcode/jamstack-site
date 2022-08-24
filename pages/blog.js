@@ -1,5 +1,5 @@
-function Blog() {
-  return <div>Blog</div>
-}
+import styles from "../styles/Home.module.css"
 
-export default Blog
+export default function Blog() {
+  return <div className={styles.page}>Blog</div>
+}

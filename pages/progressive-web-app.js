@@ -1,5 +1,5 @@
-function ProgressiveWebApp() {
-  return <div>Progressive Web App</div>
-}
+import styles from "../styles/Home.module.css"
 
-export default ProgressiveWebApp
+export default function ProgressiveWebApp() {
+  return <div className={styles.page}>Progressive Web App</div>
+}

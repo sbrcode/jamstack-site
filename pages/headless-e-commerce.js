@@ -1,5 +1,5 @@
-function HeadlessECommerce() {
-  return <div>Headless E-Commerce</div>
-}
+import styles from "../styles/Home.module.css"
 
-export default HeadlessECommerce
+export default function HeadlessECommerce() {
+  return <div className={styles.page}>Headless E-Commerce</div>
+}
