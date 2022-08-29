@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import styles from "../styles/Home.module.css"
-import Logo from "../assets/Logo.svg"
+import Logo from "../assets/Logo.png"
 import { useState } from "react"
 import { LINKSLIST } from "../constants/constants"
 import ContactButton from "./contactButton"
@@ -13,7 +13,7 @@ export default function NavBar() {
     <nav className={styles.navbar}>
       <Link href="/">
         <a>
-          <Image src={Logo} alt="Logo" width="180" height="64" />
+          <Image src={Logo} alt="Logo" width="64" height="64" />
         </a>
       </Link>
       <div className={styles.subHeader}>

@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <a
-        href="https://github.com/sbrcode/jam-beam-site"
+        href="https://github.com/sbrcode/jamstack-site"
         target="_blank"
         rel="noopener noreferrer"
       >
