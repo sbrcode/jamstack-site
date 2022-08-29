@@ -1,62 +1,61 @@
 export const LINKSLIST = [
   {
-    name: "SERVICES",
+    name: "Offres",
     links: [
       {
         url: "/site-jamstack",
         title: "Site Jamstack",
-        subTitle: "De la landing page à un site corporate complexe",
+        subTitle: "Axes de progression",
       },
       {
         url: "/headless-e-commerce",
         title: "Headless e-commerce",
-        subTitle: "Augmenter vos conversions grâce à un site ultra-rapide",
+        subTitle: "Tester des performances éprouvées",
       },
       {
         url: "/progressive-web-app",
         title: "Progressive web app",
-        subTitle: "Application web qui améliore l'expérience mobile",
+        subTitle: "Web et mobile seront dorénavant liés",
       },
     ],
   },
   {
-    name: "VOTRE BESOIN",
+    name: "Demandes",
     links: [
       {
         url: "/porteur-de-projet",
         title: "Porteur de projet",
-        subTitle: "Je cherche un accompagnement pour porter mon projet",
+        subTitle: "Qui peut m'aider ?",
       },
       {
         url: "/startup-en-croissance",
         title: "Startup en croissance",
-        subTitle: "Je cherche une équipe pour le développement de ma startup",
+        subTitle: "Je souhaite devenir une scale-up",
       },
       {
         url: "ma-boutique-en-ligne",
         title: "E-commerce",
-        subTitle:
-          "Je souhaite faire décoller les ventes de ma boutique en ligne",
+        subTitle: "Des ventes, encore plus de ventes",
       },
       {
         url: "/performance",
         title: "Performances",
-        subTitle: "Je souhaite améliorer les performances de mon site/app",
+        subTitle: "Améliorer les perf !",
       },
     ],
   },
   {
-    name: "RESSOURCES",
+    name: "Blog",
     links: [
       {
         url: "/blog",
         title: "Blog",
-        subTitle: "Notre passion du web partagée",
+        subTitle: "En construction...",
       },
       {
         url: "/qu-est-ce-que-la-jamstack",
         title: "Jamstack expliquée",
-        subTitle: "Mais qu'est-ce que la Jamstack ?",
+        subTitle: "Mais quoi donc est-ce la Jamstack ?",
       },
     ],
   },

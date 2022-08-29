@@ -13,7 +13,7 @@ export default function NavBar() {
     <nav className={styles.navbar}>
       <Link href="/">
         <a>
-          <Image src={Logo} alt="Logo" width="64" height="64" />
+          <Image src={Logo} alt="Logo" width="48" height="48" />
         </a>
       </Link>
       <div className={styles.subHeader}>
@@ -39,7 +39,7 @@ export default function NavBar() {
             </div>
           ))}
       </div>
-      <ContactButton title={"Nous Contacter"} />
+      <ContactButton title={"Prendre RDV"} />
     </nav>
   )
 }

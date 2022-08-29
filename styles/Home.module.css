@@ -42,7 +42,7 @@
   justify-content: space-between;
   display: flex;
   min-width: 15rem;
-  font-size: small;
+  font-size: large;
   cursor: pointer;
 }
 
@@ -66,8 +66,9 @@
 }
 
 .calend {
-  background-color: #67f2cb;
-  color: black;
+  background-color: darkslateblue;
+  color: white;
+  margin-block: 0.3rem;
   font-weight: bold;
   padding-block: 1rem;
   padding-inline: 1.5rem;
@@ -79,12 +80,6 @@
 .bgImage {
   height: 100vh;
   width: 100vw;
-}
-
-.text {
-  position: relative;
-  z-index: 1;
-  top: -8rem;
 }
 
 .footer {
@@ -106,7 +101,7 @@
 .logo {
   height: 1.3em;
   margin-left: 0.5rem;
-  color: #0070f3;
+  color: darkorchid;
 }
 
 @media (max-width: 600px) {

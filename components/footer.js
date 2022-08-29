@@ -8,7 +8,7 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by <span className={styles.logo}>Sylvain</span>
+        Powered by <span className={styles.logo}>sbrcode</span>
       </a>
     </footer>
   )
